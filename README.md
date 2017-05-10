@@ -1,5 +1,5 @@
 # Chess Board
-Drawing a check with HTML5 Canvas
+Drawing a chess board with HTML5 Canvas
 
 ## Built With
  - HTML5
