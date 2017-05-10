@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by bgabor91 (http://jsbin.com/palarob/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="drawCheckeredPattern()">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Practice JavaScript by drawing</title>
+</head>
+<body>
+  <canvas id="myCanvas" height="450" width="450" style="border: 1px solid black"></canvas>
+<script id="jsbin-javascript">
+
+var c = document.getElementById('myCanvas').getContext('2d');
+var cw = c.canvas.width;
+var ch = c.canvas.height;
+
+function drawCheckeredPattern(row, col){
+  var cellW = cw/row;
+  var cellH = ch/col;
+    for (var i = 0; i < 8; i++){
+      
+      for(var j = 0; j < 8; j++){
+        if((i + j) %2 === 0){
+          c.fillStyle ='white';
+      } else {
+         c.fillStyle ='black';
+      }
+    c.fillRect(cellW*i,cellH*j,cellW,cellH);
+  } 
+}     
+}
+drawCheckeredPattern(8,8);
+</script>
+</body>
+</html>
